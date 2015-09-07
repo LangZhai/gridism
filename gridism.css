@@ -22,6 +22,15 @@
   width: 100%;
   padding: 10px;
 }
+.grid .unit.cell {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+}
+.table {
+  display: table;
+  width: 100%;
+}
 
 /* This ensures the outer gutters are equal to the (doubled) inner gutters. */
 .grid .unit:first-child { padding-left: 20px; }
@@ -43,7 +52,8 @@
 .wrap .grid,
 .grid.wrap {
   max-width: 978px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Width classes also have shorthand versions numbered as fractions
@@ -133,7 +143,7 @@
 }
 
 /* Responsive Stuff */
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 767px) {
   /* Width classes also have shorthand versions numbered as fractions
    * For example: for a grid unit 1/3 (one third) of the parent width,
    * simply apply class="w-1-3" to the element. */
@@ -212,11 +222,68 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /* Width classes also have shorthand versions numbered as fractions
+   * For example: for a grid unit 1/3 (one third) of the parent width,
+   * simply apply class="w-1-3" to the element. */
+  .grid .mid-whole,          .grid .mid-w-1-1 { width: 100%; }
+  .grid .mid-half,           .grid .mid-w-1-2 { width: 50%; }
+  .grid .mid-one-third,      .grid .mid-w-1-3 { width: 33.3333%; }
+  .grid .mid-two-thirds,     .grid .mid-w-2-3 { width: 66.6667%; }
+  .grid .mid-one-quarter,
+  .grid .mid-one-fourth,     .grid .mid-w-1-4 { width: 25%; }
+  .grid .mid-three-quarters,
+  .grid .mid-three-fourths,  .grid .mid-w-3-4 { width: 75%; }
+  .grid .mid-one-fifth,      .grid .mid-w-1-5 { width: 20%; }
+  .grid .mid-two-fifths,     .grid .mid-w-2-5 { width: 40%; }
+  .grid .mid-three-fifths,   .grid .mid-w-3-5 { width: 60%; }
+  .grid .mid-four-fifths,    .grid .mid-w-4-5 { width: 80%; }
+  .grid .mid-one-sixth,      .grid .mid-w-1-6 { width: 16.6667%; }
+  .grid .mid-five-sixths,    .grid .mid-w-5-6 { width: 83.3333%; }
+  .grid .mid-one-seventh,    .grid .mid-w-1-7 { width: 14.2857%; }
+  .grid .mid-two-sevenths,   .grid .mid-w-2-7 { width: 28.5714%; }
+  .grid .mid-three-sevenths, .grid .mid-w-3-7 { width: 42.8571%; }
+  .grid .mid-four-sevenths,  .grid .mid-w-4-7 { width: 57.1429%; }
+  .grid .mid-five-sevenths,  .grid .mid-w-5-7 { width: 71.4286%; }
+  .grid .mid-six-sevenths,   .grid .mid-w-6-7 { width: 85.7143%; }
+  .grid .mid-one-eighth,     .grid .mid-w-1-8 { width: 12.5%; }
+  .grid .mid-three-eighths,  .grid .mid-w-3-8 { width: 37.5%; }
+  .grid .mid-five-eighths,   .grid .mid-w-5-8 { width: 62.5%; }
+  .grid .mid-seven-eighths,  .grid .mid-w-7-8 { width: 87.5%; }
+  .grid .mid-one-ninth,      .grid .mid-w-1-9 { width: 11.1111%; }
+  .grid .mid-two-ninths,     .grid .mid-w-2-9 { width: 22.2222%; }
+  .grid .mid-four-ninths,    .grid .mid-w-4-9 { width: 44.4444%; }
+  .grid .mid-five-ninths,    .grid .mid-w-5-9 { width: 55.5556%; }
+  .grid .mid-seven-ninths,   .grid .mid-w-7-9 { width: 77.7778%; }
+  .grid .mid-eight-ninths,   .grid .mid-w-8-9 { width: 88.8889%; }
+  .grid .mid-one-tenth,      .grid .mid-w-1-10 { width: 10%; }
+  .grid .mid-three-tenths,   .grid .mid-w-3-10 { width: 30%; }
+  .grid .mid-seven-tenths,   .grid .mid-w-7-10 { width: 70%; }
+  .grid .mid-nine-tenths,    .grid .mid-w-9-10 { width: 90%; }
+  .grid .mid-one-eleventh,   .grid .mid-w-1-11 { width: 9.0909%; }
+  .grid .mid-two-elevenths,  .grid .mid-w-2-11 { width: 18.1818%; }
+  .grid .mid-three-elevenths,.grid .mid-w-3-11 { width: 27.2727%; }
+  .grid .mid-four-elevenths, .grid .mid-w-4-11 { width: 36.3636%; }
+  .grid .mid-five-elevenths, .grid .mid-w-5-11 { width: 45.4545%; }
+  .grid .mid-six-elevenths,  .grid .mid-w-6-11 { width: 54.5455%; }
+  .grid .mid-seven-elevenths,.grid .mid-w-7-11 { width: 63.6364%; }
+  .grid .mid-eight-elevenths,.grid .mid-w-8-11 { width: 72.7273%; }
+  .grid .mid-nine-elevenths, .grid .mid-w-9-11 { width: 81.8182%; }
+  .grid .mid-ten-elevenths,  .grid .mid-w-10-11 { width: 90.9091%; }
+  .grid .mid-one-twelfth,    .grid .mid-w-1-12 { width: 8.3333%; }
+  .grid .mid-five-twelfths,  .grid .mid-w-5-12 { width: 41.6667%; }
+  .grid .mid-seven-twelfths, .grid .mid-w-7-12 { width: 58.3333%; }
+  .grid .mid-eleven-twelfths,.grid .mid-w-11-12 { width: 91.6667%; }
+  .grid .mid-golden-small,   .grid .mid-w-g-s { width: 38.2716%; } /* Golden section: smaller piece */
+  .grid .mid-golden-large,   .grid .mid-w-g-l { width: 61.7283%; } /* Golden section: larger piece */
+}
+
 /* Expand the wrap a bit further on larger screens */
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1200px) {
   .wider .grid,
   .grid.wider {
-    max-width: 1180px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
