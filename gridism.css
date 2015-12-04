@@ -276,6 +276,10 @@
   .grid .mid-eleven-twelfths,.grid .mid-w-11-12 { width: 91.6667%; }
   .grid .mid-golden-small,   .grid .mid-w-g-s { width: 38.2716%; } /* Golden section: smaller piece */
   .grid .mid-golden-large,   .grid .mid-w-g-l { width: 61.7283%; } /* Golden section: larger piece */
+
+  .hide-on-middle {
+    display: none !important;
+  }
 }
 
 /* Expand the wrap a bit further on larger screens */
